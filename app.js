@@ -5,6 +5,7 @@ const billInputGroup = document.querySelector('.bill-input-group');
 const customTip = document.querySelector('.custom');
 const peopleNum = document.querySelector('#people-input');
 const peopleInputGroup = document.querySelector('.people-input-group');
+const errMessage = document.querySelector('.people-number>span');
 
 let totalResult = document.querySelector('#total-result').lastChild;
 let tipResult = document.querySelector('#tip-result').lastChild;
@@ -90,8 +91,17 @@ peopleNum.addEventListener('blur', () => {
 })
 
 peopleNum.addEventListener('keyup', () => {
-    currentPeople = peopleNum.value;
-    showResults();
+    if (peopleNum.value === '0') {
+        peopleInputGroup.classList.add('error');
+        errMessage.classList.add('enabled');
+    } else {
+        if (errMessage.classList.contains('enabled') && peopleInputGroup.classList.contains('error')) {
+            peopleInputGroup.classList.remove('error');
+            errMessage.classList.remove('enabled')
+        }
+        currentPeople = peopleNum.value;
+        showResults();
+    }
 })
 
 customTip.addEventListener('click', () => {
