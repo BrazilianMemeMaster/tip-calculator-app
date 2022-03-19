@@ -1,5 +1,5 @@
 const tips = document.querySelectorAll('.tip-option');
-const resetBtn = document.querySelector('#reset');
+const resetBtn = document.querySelector('.reset');
 const billInput = document.querySelector('#bill-input');
 const billInputGroup = document.querySelector('.bill-input-group');
 const customTip = document.querySelector('.custom');
@@ -39,6 +39,14 @@ const clear = () => {
     }
 }
 
+const activateReset = () => {
+    resetBtn.classList.remove('inactive');
+}
+
+const deactivateReset = () => {
+    resetBtn.classList.add('inactive');
+}
+
 const addSelected = (b) => {
     b.classList.add('selected');
 }
@@ -61,6 +69,7 @@ const showResults = () => {
     } else {
         totalResult.innerText = calculateTotalResult();
         tipResult.innerText = calculateTipResult();
+        activateReset();
     }
 }
 
@@ -129,4 +138,5 @@ tips.forEach(btn => {
 
 resetBtn.addEventListener('click', () => {
     clear();
+    deactivateReset();
 })

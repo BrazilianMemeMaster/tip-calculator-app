@@ -68,7 +68,7 @@ input[type=number] {
         outline: none;
     }
     #bill-input::placeholder {
-        color: hsl(185, 41%, 84%);
+        color: hsl(184, 14%, 56%);
     }
     .tip-selection {
         margin-bottom: 25px;
@@ -160,7 +160,7 @@ input[type=number] {
         outline: none;
     }
     #people-input::placeholder {
-        color: hsl(185, 41%, 84%);
+        color: hsl(184, 14%, 56%);
     }
     .results {
         background-color: hsl(183, 100%, 15%);
@@ -195,7 +195,7 @@ input[type=number] {
         font-size: 24px;
         text-align: right;
     }
-    #reset {
+    .reset {
         border: none;
         color: hsl(183, 100%, 15%);
         background-color: hsl(172, 67%, 45%);
@@ -206,7 +206,7 @@ input[type=number] {
         margin-top: 10px;
         grid-column: 1 / span 2;
     }
-    #reset:hover {
+    .reset:hover {
         cursor: pointer;
         background-color: hsl(172, 50%, 77%);
         color: hsl(183, 100%, 15%);
@@ -220,11 +220,20 @@ input[type=number] {
     .enabled {
         display: flex;
     }
+    .inactive {
+        color: hsl(183, 100%, 15%);
+        background-color: hsl(183, 80%, 24%);
+    }
+    .inactive:hover {
+        color: hsl(183, 100%, 15%);
+        background-color: hsl(183, 80%, 24%);
+        cursor: default;
+    }
 }
 
 @media (min-width: 921px) {
     .logo {
-        margin: 70px 0 40px 0;
+        margin: 150px 0 80px 0;
     }
     .container {
         background-color: white;
@@ -280,7 +289,7 @@ input[type=number] {
         outline: none;
     }
     #bill-input::placeholder {
-        color: hsl(185, 41%, 84%);
+        color: hsl(184, 14%, 56%);
     }
     .tip-selection {
         margin-bottom: 25px;
@@ -340,7 +349,7 @@ input[type=number] {
         order: 3;
         margin-top: 10px;
     }
-    #error-message {
+    .error-message {
         display: none;
         color: rgb(218, 116, 0);
     }
@@ -376,7 +385,7 @@ input[type=number] {
         outline: none;
     }
     #people-input::placeholder {
-        color: hsl(185, 41%, 84%);
+        color: hsl(184, 14%, 56%);
     }
     .results {
         background-color: hsl(183, 100%, 15%);
@@ -424,7 +433,7 @@ input[type=number] {
         justify-content: flex-end;
         text-align: right;
     }
-    #reset {
+    .reset {
         border: none;
         color: hsl(183, 100%, 15%);
         background-color: hsl(172, 67%, 45%);
@@ -435,7 +444,7 @@ input[type=number] {
         margin-top: 100px;
         grid-column: 1 / span 2;
     }
-    #reset:hover {
+    .reset:hover {
         cursor: pointer;
         background-color: hsl(172, 50%, 77%);
         color: hsl(183, 100%, 15%);
@@ -448,5 +457,14 @@ input[type=number] {
     }
     .enabled {
         display: flex;
+    }
+    .inactive {
+        color: hsl(183, 100%, 15%);
+        background-color: hsl(183, 80%, 24%);
+    }
+    .inactive:hover {
+        color: hsl(183, 100%, 15%);
+        background-color: hsl(183, 80%, 24%);
+        cursor: default;
     }
 }
