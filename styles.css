@@ -9,6 +9,16 @@ body {
     align-items: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 @media (max-width:920px) {
     .logo {
         margin: 30px 0;
@@ -40,11 +50,6 @@ body {
     }
     #dollar-icon>img {
         width: 10px;
-    }
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
     }
     #bill-input {
         width: 75%;
