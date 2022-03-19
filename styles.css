@@ -323,13 +323,16 @@ body {
     .custom::placeholder {
         color: hsl(186, 14%, 43%);
     }
+    .label {
+        display: flex;
+        justify-content: space-between;
+    }
     .people-number {
         order: 3;
         margin-top: 10px;
     }
-    .people-number>span {
+    .error-message {
         display: none;
-        margin-left: 35px;
         color: rgb(218, 116, 0);
     }
     .people-input-group {

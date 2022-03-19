@@ -5,7 +5,7 @@ const billInputGroup = document.querySelector('.bill-input-group');
 const customTip = document.querySelector('.custom');
 const peopleNum = document.querySelector('#people-input');
 const peopleInputGroup = document.querySelector('.people-input-group');
-const errMessage = document.querySelector('.people-number>span');
+const errMessage = document.querySelector('.error-message');
 
 let totalResult = document.querySelector('#total-result').lastChild;
 let tipResult = document.querySelector('#tip-result').lastChild;
@@ -27,6 +27,10 @@ const removeSelected = () => {
 const clear = () => {
     totalResult.innerText = '0.00'
     tipResult.innerText = '0.00'
+    currentTip = undefined;
+    currentBill = '';
+    currentPeople = '';
+    customTip.value = '';
     billInput.value = '';
     peopleNum.value = '';
     let selected = document.querySelector('.selected');
@@ -124,5 +128,5 @@ tips.forEach(btn => {
 })
 
 resetBtn.addEventListener('click', () => {
-    window.location.reload(true)
+    clear();
 })
