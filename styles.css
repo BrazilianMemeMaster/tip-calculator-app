@@ -114,7 +114,11 @@ body {
     .custom::placeholder {
         color: hsl(186, 14%, 43%);
     }
-    .people-number>span {
+    .label {
+        display: flex;
+        justify-content: space-between;
+    }
+    .error-message {
         display: none;
         margin-left: 35px;
         color: rgb(218, 116, 0);
@@ -331,7 +335,7 @@ body {
         order: 3;
         margin-top: 10px;
     }
-    .error-message {
+    #error-message {
         display: none;
         color: rgb(218, 116, 0);
     }
